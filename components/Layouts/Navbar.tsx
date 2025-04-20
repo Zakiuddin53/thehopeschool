@@ -1,10 +1,11 @@
 'use client';
 
-import Image from 'next/image'; // Added import for Next.js Image component
+import Image from 'next/image';
 import { Burger, Container, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import classes from './HeaderMenu.module.css'; // Consider renaming this CSS module file as well if desired
+import classes from './HeaderMenu.module.css';
 import Link from 'next/link';
+import { TopNav } from './TopNav';
 
 const links = [
   { link: '/', label: 'Home' },
@@ -28,16 +29,19 @@ export function Navbar() {
   ));
 
   return (
-    <header className={classes.header}>
-      <Container size="md">
-        <div className={classes.inner}>
-          <Image src="/logos/school-logo.png" alt="The Hope School Logo" width={100} height={100} />
-          <Group gap={5} visibleFrom="sm">
-            {items}
-          </Group>
-          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
-        </div>
-      </Container>
-    </header>
+    <>
+      <TopNav />
+      <header className={classes.header}>
+        <Container size="md">
+          <div className={classes.inner}>
+            <Image src="/logos/school-logo.png" alt="Lotus Valley School Logo" width={100} height={100} />
+            <Group gap={5} visibleFrom="sm">
+              {items}
+            </Group>
+            <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+          </div>
+        </Container>
+      </header>
+    </>
   );
 }
