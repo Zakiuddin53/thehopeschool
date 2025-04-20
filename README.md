@@ -25,5 +25,5 @@ A modern, responsive website for The Hope International School built with Next.j
 First, install the dependencies:
 
 ```bash
-npm install --legacy-peer-deps
+npm install -f
 ```
