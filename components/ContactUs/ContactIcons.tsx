@@ -1,7 +1,7 @@
 'use client';
 
-import { Text, Box, Stack, rem } from '@mantine/core';
-import { IconSun, IconPhone, IconMapPin, IconAt } from '@tabler/icons-react';
+import { IconAt, IconMapPin, IconPhone, IconSun } from '@tabler/icons-react';
+import { Box, rem, Stack, Text } from '@mantine/core';
 import classes from './ContactIcons.module.css';
 
 interface ContactIconProps {
@@ -28,7 +28,7 @@ function ContactIcon({ icon: Icon, title, description }: ContactIconProps) {
 }
 
 const MOCKDATA = [
-  { title: 'Email', description: 'lotusvalley33@gmail.com', icon: IconAt },
+  { title: 'Email', description: 'info@thehopeinternationalschool.com', icon: IconAt },
   { title: 'Phone', description: '+91 7302-112542', icon: IconPhone },
   { title: 'Address', description: 'Your School Address Here', icon: IconMapPin },
   { title: 'Working hours', description: 'Mon To Sat: 8:00 AM To 4:00 PM', icon: IconSun },
