@@ -1,32 +1,62 @@
 .header {
-  height: 56px;
-  margin-bottom: 120px;
-  background-color: var(--mantine-color-body);
-  border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  height: 100px;
+  padding: var(--mantine-spacing-md);
+  background-color: var(--mantine-color-white);
+  border-bottom: 1px solid var(--mantine-color-gray-3);
 }
 
 .inner {
-  height: 56px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: var(--mantine-breakpoint-md);
+  margin: 0 auto;
 }
 
 .link {
   display: block;
   line-height: 1;
-  padding: 8px 12px;
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
   border-radius: var(--mantine-radius-sm);
   text-decoration: none;
-  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
-  font-size: var(--mantine-font-size-sm);
+  color: var(--mantine-color-dark-6);
+  font-size: 1rem;
   font-weight: 500;
+  transition: all 0.2s;
 
-  @mixin hover {
-    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--mantine-color-gray-0);
+      color: var(--mantine-color-dark-9);
+    }
   }
 }
 
-.linkLabel {
-  margin-right: 5px;
+.mobileLinks {
+  padding: var(--mantine-spacing-md);
+
+  .link {
+    padding: var(--mantine-spacing-md);
+    border-radius: 0;
+    border-bottom: 1px solid var(--mantine-color-gray-2);
+    font-size: 1.1rem;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--mantine-spacing-md);
+}
+
+.logoImage {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  max-height: 80px;
 }

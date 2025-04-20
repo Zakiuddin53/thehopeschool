@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
-import { ActionIcon, Container, Group, Text } from '@mantine/core';
+import { ActionIcon, Container, Group, Text, Stack } from '@mantine/core';
 import classes from './FooterLinks.module.css';
 
 const data = [
@@ -44,7 +44,7 @@ export function Footer() {
     return (
       <div className={classes.wrapper} key={group.title}>
         <Text className={classes.title}>{group.title}</Text>
-        {links}
+        <Stack gap="xs">{links}</Stack>
       </div>
     );
   });
@@ -61,41 +61,43 @@ export function Footer() {
         <div className={classes.groups}>{groups}</div>
       </Container>
       <Container className={classes.afterFooter}>
-        <Text c="dimmed" size="sm">
-          © {new Date().getFullYear()} The Hope School. All rights reserved.
-        </Text>
+        <Group justify="space-between" className={classes.afterFooterGroup}>
+          <Text c="dimmed" size="sm">
+            © {new Date().getFullYear()} The Hope School. All rights reserved.
+          </Text>
 
-        <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">
-          <ActionIcon
-            size="lg"
-            color="gray"
-            variant="subtle"
-            component="a"
-            href="#"
-            target="_blank"
-          >
-            <IconBrandTwitter size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon
-            size="lg"
-            color="gray"
-            variant="subtle"
-            component="a"
-            href="#"
-            target="_blank"
-          >
-            <IconBrandYoutube size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon
-            size="lg"
-            color="gray"
-            variant="subtle"
-            component="a"
-            href="#"
-            target="_blank"
-          >
-            <IconBrandInstagram size={18} stroke={1.5} />
-          </ActionIcon>
+          <Group gap={0} className={classes.social} wrap="nowrap">
+            <ActionIcon
+              size="lg"
+              color="gray"
+              variant="subtle"
+              component="a"
+              href="#"
+              target="_blank"
+            >
+              <IconBrandTwitter size={18} stroke={1.5} />
+            </ActionIcon>
+            <ActionIcon
+              size="lg"
+              color="gray"
+              variant="subtle"
+              component="a"
+              href="#"
+              target="_blank"
+            >
+              <IconBrandYoutube size={18} stroke={1.5} />
+            </ActionIcon>
+            <ActionIcon
+              size="lg"
+              color="gray"
+              variant="subtle"
+              component="a"
+              href="#"
+              target="_blank"
+            >
+              <IconBrandInstagram size={18} stroke={1.5} />
+            </ActionIcon>
+          </Group>
         </Group>
       </Container>
     </footer>

@@ -1,0 +1,20 @@
+.wrapper {
+  background-color: var(--mantine-color-gray-0);
+  padding: var(--mantine-spacing-xs) 0;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mobileStack {
+  width: 100%;
+  text-align: center;
+}
+
+.topNav {
+  @media (max-width: 48em) {
+    padding: var(--mantine-spacing-xs) 0;
+  }
+}
