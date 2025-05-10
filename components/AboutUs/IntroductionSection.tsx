@@ -24,12 +24,13 @@ export function IntroductionSection() {
           </Title>
           <Divider size="xs" mb={rem(20)} style={{ maxWidth: 120 }} />
           <Text size="lg" c="dimmed" mb={rem(8)}>
-            At The Hope School, we nurture every child’s potential and foster a love for lifelong
-            learning.
+            We believe that every child is special. With small class sizes, experienced teachers,
+            and activity-based learning, we focus on overall development — mind, body, and
+            character.
           </Text>
           <Text size="md" c="dimmed">
-            Our vibrant community is dedicated to academic excellence, creativity, and holistic
-            development. Join us on a journey where education meets inspiration.
+            Our students enjoy a balanced mix of academics, Islamic studies, creative arts, sports,
+            and life skills, all in a friendly and modern environment.
           </Text>
         </Paper>
       </Container>

@@ -5,6 +5,7 @@ import {
   Box,
   Container,
   Group,
+  List,
   Paper,
   rem,
   Stack,
@@ -23,10 +24,9 @@ export function MissionVisionSection() {
         <Box py={rem(64)}>
           <Container size="md">
             <Title order={2} ta="center" fw={900} mb={rem(32)}>
-              Our Mission & Vision
+              <span style={{ fontStyle: 'italic' }}>Mission & Vision</span>
             </Title>
             <Stack align="center" gap={0} style={{ position: 'relative' }}>
-              {/* Vertical line */}
               <Box
                 style={{
                   position: 'absolute',
@@ -47,7 +47,7 @@ export function MissionVisionSection() {
                 p={rem(32)}
                 withBorder
                 style={{
-                  background: '#fff',
+                  background: '#f8faff',
                   minWidth: 320,
                   maxWidth: 480,
                   marginBottom: rem(40),
@@ -61,12 +61,23 @@ export function MissionVisionSection() {
                   </ThemeIcon>
                 </Group>
                 <Title order={3} ta="center" mb={rem(8)} c="blue" fw={800}>
-                  Our Mission
+                  Mission
                 </Title>
-                <Text ta="center" size="md" c="dimmed">
-                  To inspire and empower students to become compassionate, confident, and
-                  responsible global citizens.
-                </Text>
+                <List
+                  spacing="xs"
+                  size="md"
+                  center
+                  icon={<span style={{ color: '#228be6' }}>•</span>}
+                >
+                  <List.Item>
+                    To inspire and support every child to achieve their best — academically,
+                    socially, and spiritually.
+                  </List.Item>
+                  <List.Item>
+                    To help students grow into responsible and sincere citizens, guided by strong
+                    values and a love for learning.
+                  </List.Item>
+                </List>
               </Paper>
               <Paper
                 shadow="md"
@@ -74,7 +85,7 @@ export function MissionVisionSection() {
                 p={rem(32)}
                 withBorder
                 style={{
-                  background: '#fff',
+                  background: '#f8faff',
                   minWidth: 320,
                   maxWidth: 480,
                   marginTop: rem(40),
@@ -88,12 +99,27 @@ export function MissionVisionSection() {
                   </ThemeIcon>
                 </Group>
                 <Title order={3} ta="center" mb={rem(8)} c="cyan" fw={800}>
-                  Our Vision
+                  Vision
                 </Title>
-                <Text ta="center" size="md" c="dimmed">
-                  To be a leading institution recognized for excellence in education, innovation,
-                  and character building.
-                </Text>
+                <List
+                  spacing="xs"
+                  size="md"
+                  center
+                  icon={<span style={{ color: '#15aabf' }}>•</span>}
+                >
+                  <List.Item>
+                    To create a safe, happy, and healthy place where children feel loved and
+                    respected.
+                  </List.Item>
+                  <List.Item>
+                    To provide holistic education that develops strong communication, creative
+                    thinking, and problem-solving skills.
+                  </List.Item>
+                  <List.Item>
+                    To raise successful learners who are kind, confident, and prepared for a bright
+                    future.
+                  </List.Item>
+                </List>
               </Paper>
             </Stack>
           </Container>
